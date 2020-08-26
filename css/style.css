@@ -6,6 +6,8 @@
 
 #container {
     height: 100vh;
+    background-color: #cccccc;
+    border: 3px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,11 +15,18 @@
 }
 
 h1 {
+    font-size: 50px;
     text-transform: capitalize;
+    color: #ffffff;
+    text-shadow: 
+  -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    letter-spacing: 0.2rem;
 }
 
 li {
     width: 100%;
+    font-size: 20px;
+    font-weight: 600;
     display: flex;
     justify-content: space-between;
     padding: 12px;
@@ -29,6 +38,29 @@ li>span {
 
 input {
     outline: none;
+}
+
+input,
+button {
+    padding: 15px;
+    margin: 0 5px 0;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid black;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+button:hover {
+    border: 1px solid black;
+    background-color: #ffffff;
+    color: black;
 }
 
 .delete {

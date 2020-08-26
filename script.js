@@ -24,7 +24,7 @@ function printTodoList(item) {
     list.text('');
     for (var i = 0; i < item.length; i++) {
         var y = item[i]; 
-        list.append(`<li> ${y.text} <span data-id= "${y.id}"  class="delete"><strong> X </strong></span></li>`);   
+        list.append(`<li> ${y.text} <span data-id= "${y.id}"  class="delete">X</span></li>`);   
     }
 }
 
@@ -32,6 +32,7 @@ function addItemTodoList () {
     
     var btn = $('#add');
     btn.click(insertItemApi);
+    $(document).keyup(pressApi);
 }
 
 function insertItemApi () {
@@ -53,6 +54,12 @@ function insertItemApi () {
             console.log('err', err);
         }
     });
+}
+
+function pressApi(event) {   
+    if (event.which==13 || event.keyCode==13) {
+        insertItemApi(); 
+    }
 }
 
 function deleteItem() {
