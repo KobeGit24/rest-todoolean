@@ -8,10 +8,30 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
+h1 {
+    text-transform: capitalize;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+li>span {
+    padding-left: 20px;
+}
+
+input {
+    outline: none;
+}
+
 .delete {
+    color: red;
     cursor: pointer;
 }
